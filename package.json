@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet Openclassroom",
+  "main": "index.js",
+  "scripts": {
+     "sass": "sass --watch ./sass/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NLN74/OhMyFood_Nolan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NLN74/OhMyFood_Nolan/issues"
+  },
+  "homepage": "https://github.com/NLN74/OhMyFood_Nolan#readme"
+}

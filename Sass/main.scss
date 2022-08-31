@@ -5,12 +5,22 @@
     font-family: 'Roboto';
 }
 
+a{
+    color: black;
+}
+
 body{
     margin: 0px;
     display: flex;
     flex-direction: column;
     min-width: 375px;
     max-width: 760px;
+}
+
+h3{
+    margin: 1.7em 0em 0.6em 0.7em;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 
@@ -73,13 +83,8 @@ header{
 .fonctionnement{
     display: flex;
     flex-direction: column;
-    margin-bottom: 4em;
+    margin-bottom: 3.5em;
 
-        h3{
-            margin: 1.7em 0em 0.6em 0.7em;
-            font-size: 25px;
-            font-weight: bold;
-        }
 
         div{
             display: flex;
@@ -130,3 +135,64 @@ header{
 
 }
 
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 4em;
+
+        figure{
+            margin: auto;
+            margin-bottom: 1.2em;
+            width: 334px;
+            height: 252px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgb(210, 210, 210);
+
+
+                .new{
+                    background-color: #99E2D0;
+                    padding: 0.4em 0.7em 0.4em 0.7em;
+                    color: #008766;
+                    font-weight: bold;
+                    margin-left: 17.6em;
+                    font-size: 14px;
+                    border-radius: 2.5px;
+                }
+
+                p{
+                    position: absolute;
+                }
+
+                img{
+                    height: 174px;
+                    width: 334px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    object-fit: cover;
+                }
+                    /*DESIGN HEART*/
+                .heart{
+                    position: absolute;
+                    margin: 0.5em 0em 0em 6.5em;
+                    font-size: 20px;
+                
+
+                }
+
+                .heart:hover{
+                    background: linear-gradient(175deg, #FF79DA, #9356DC);
+                    height: 17px;
+                }
+
+                figcaption{
+                    font-weight: bold;
+                    margin: 0.7em 0em 0em 0.65em;
+                    font-size: 18px;
+                }
+
+                .lieux{
+                    margin: 0.2em 0em 0em 0.65em;
+                }
+        }
+}

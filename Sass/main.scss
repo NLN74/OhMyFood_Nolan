@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
+/*Propriétés générales du site*/
 *{
     text-decoration: none;
     font-family: 'Roboto';
@@ -36,6 +37,7 @@ header{
 
 }
 
+/*Position*/
 .position{
     text-align: center;
     background-color: rgb(234, 234, 234);
@@ -53,6 +55,7 @@ header{
         }
 }
 
+/*Présentation du site web*/
 .presentation{
     padding-bottom: 4.5em;
     font-family: 'Roboto', sans-serif;
@@ -80,6 +83,7 @@ header{
         }
 }
 
+/*Présentation du fonctionnement du site web*/
 .fonctionnement{
     display: flex;
     flex-direction: column;
@@ -135,6 +139,7 @@ header{
 
 }
 
+/*Carte restaurants*/
 .restaurants{
     display: flex;
     flex-direction: column;

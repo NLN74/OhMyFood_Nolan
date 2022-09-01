@@ -140,7 +140,7 @@ header{
 }
 
 /*Carte restaurants*/
-.restaurants{
+#restaurants{
     display: flex;
     flex-direction: column;
     background-color: rgb(245, 245, 245);
@@ -200,4 +200,34 @@ header{
                     margin: 0.2em 0em 0em 0.65em;
                 }
         }
+
+}
+
+footer{
+    background-color: #353535;
+    padding-bottom: 2em;
+    h4{
+        font-family: 'Shrikhand';
+        font-size: 20px;
+        margin-bottom: 0.7em;
+    }
+
+    ul{
+        list-style: none;
+        padding-left: 1.5em;
+        color: white;
+
+
+
+    }
+    a{
+        color: white;
+    }
+    li{
+        margin-bottom: 0.4em;
+    }
+    .ustensibl{
+        margin-right: 0.7em;
+        font-size: 13px;
+    }
 }

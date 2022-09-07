@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   min-width: 375px;
   max-width: 760px;
+  margin: auto;
 }
 
 h3 {
@@ -46,8 +47,8 @@ header img {
 .position p::before {
   content: "\f3c5";
   font-family: "FontAwesome";
-  position: absolute;
-  left: 29%;
+  padding-right: 10px;
+  margin-left: -20px;
   font-size: 15px;
 }
 
@@ -97,8 +98,8 @@ header img {
   background-color: #f5edff;
 }
 .fonctionnement .icon_number {
-  position: absolute;
-  left: 1.1em;
+  margin-left: -6em;
+  margin-right: 4em;
   color: white;
   border-radius: 50%;
   padding: 0.3em 0.6em 0.3em 0.6em;
@@ -156,10 +157,14 @@ header img {
   font-size: 20px;
 }
 #restaurants figure .heart:hover {
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  content: "\f004";
+  font-family: "FontAwesome";
+  background-image: linear-gradient(30deg, #FF79DA, #9356DC);
   height: 17px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-#restaurants figure figcaption {
+#restaurants figure h4 {
   font-weight: bold;
   margin: 0.7em 0em 0em 0.65em;
   font-size: 18px;

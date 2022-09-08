@@ -161,6 +161,7 @@ header img {
   font-family: "FontAwesome";
   background-image: linear-gradient(30deg, #FF79DA, #9356DC);
   height: 17px;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

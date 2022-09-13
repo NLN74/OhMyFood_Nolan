@@ -38,7 +38,7 @@ header img {
 
 /*Image Background*/
 .background_image img {
-  width: 100%;
+  width: 375px;
   object-fit: cover;
   position: absolute;
 }

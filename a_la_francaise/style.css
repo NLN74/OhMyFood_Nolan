@@ -31,9 +31,14 @@ header {
   margin-bottom: 0.25em;
   padding: 1.5em 0em 0.2em 0em;
 }
-
 header img {
   width: 162px;
+}
+header .button_back {
+  position: absolute;
+  left: 1.2em;
+  top: 1em;
+  font-size: 1.4em;
 }
 
 /*Image Background*/
@@ -45,39 +50,82 @@ header img {
 
 .menus {
   padding: 7px 20px 0px 20px;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
   z-index: 1;
   margin-top: 12.5em;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
+  padding-bottom: 5em;
+  /*Titre A la francaise*/
+  /*Design du coeur*/
+  /*Différentes parties des menus*/
+  /*Les différents menus*/
 }
 .menus h1 {
   font-family: "Shrikhand";
   font-size: 1.5em;
+  margin-bottom: 1.5em;
 }
 .menus h2 {
   font-size: 15px;
   font-weight: 200;
+  padding-bottom: 0.2em;
+  border-bottom: 3px solid rgb(153, 226, 208);
+  margin-inline-end: 88%;
+}
+.menus .heart {
+  position: absolute;
+  margin: 0.2em 0em 0em 5em;
+  font-size: 25px;
+}
+.menus .heart:hover {
+  content: "\f004";
+  font-family: "FontAwesome";
+  background-image: linear-gradient(30deg, #FF79DA, #9356DC);
+  height: 30px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menus .menu {
+  margin-bottom: 2em;
+}
+.menus .entrees_plats:hover {
+  box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
 }
 .menus .entrees_plats {
-  box-shadow: 0px 0px 10px 0.7px #F2F2F2;
-  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
+  border-radius: 15px;
+  padding: 12px 15px 0px 10px;
+  margin-bottom: 1em;
+  background-color: white;
 }
 .menus .entrees_plats h4 {
   font-size: 1.1em;
+  margin-top: 0px;
 }
 .menus .entrees_plats span {
   display: flex;
   justify-content: space-between;
-  margin-top: -2em;
-  margin: -1.5em 0em 0em 0em;
+  margin-top: -2.1em;
 }
 .menus .entrees_plats span p {
   font-size: 0.9em;
+  margin-bottom: 8px;
 }
 .menus .entrees_plats span .prix {
   font-weight: bold;
   font-size: 1em;
+}
+.menus .button_cmd {
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 1em;
+  border-radius: 50px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  width: 150px;
+  box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
 }
 
 /*Footer*/
@@ -109,6 +157,27 @@ footer li {
 footer .ustensibl {
   margin-right: 0.7em;
   font-size: 13px;
+}
+
+@media screen and (min-width: 761px) and (max-width: 1920px) {
+  body {
+    min-width: none;
+    max-width: none;
+    margin-top: 10px;
+    width: 80%;
+    box-shadow: 0px 0px 10px 10px #F2F2F2;
+    border-radius: 20px;
+  }
+  .background_image img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    height: 300px;
+  }
+  .menus {
+    margin-top: -10px;
+    border-radius: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

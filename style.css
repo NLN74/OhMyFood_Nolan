@@ -73,11 +73,13 @@ header img {
   padding: 1em;
   border-radius: 50px;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
+  transition: transform 400ms;
 }
 
-.presentation a:hover{
+.presentation a:hover {
   background: linear-gradient(175deg, #ff98e2, #a97ce0);
-  box-shadow: 0px 0px 10px 3px rgb(195, 195, 195);
+  box-shadow: 0px 0px 10px 3px rgb(230, 230, 230);
+  transform: scale(1.05);
 }
 
 /*Présentation du fonctionnement du site web*/

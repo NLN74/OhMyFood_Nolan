@@ -27,17 +27,17 @@ h3 {
 
 /**Header**/
 header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.25em;
-  padding: 1.5em 0em 0.2em 0em;
+  padding: 1.5em 0em 0.4em 0em;
 }
 header img {
   width: 162px;
 }
 header .button_back {
   position: absolute;
-  left: 1.2em;
-  top: 1em;
+  margin-right: 13.5em;
   font-size: 1.4em;
 }
 
@@ -70,7 +70,7 @@ header .button_back {
   font-size: 15px;
   font-weight: 200;
   padding-bottom: 0.2em;
-  border-bottom: 3px solid rgb(153, 226, 208);
+  border-bottom: 3px solid #99E2D0;
   margin-inline-end: 88%;
 }
 .menus .heart {
@@ -78,7 +78,7 @@ header .button_back {
   margin: 0.2em 0em 0em 5em;
   font-size: 25px;
 }
-.menus .heart:hover {
+.menus .heart:active {
   content: "\f004";
   font-family: "FontAwesome";
   background-image: linear-gradient(30deg, #FF79DA, #9356DC);
@@ -88,7 +88,7 @@ header .button_back {
   -webkit-text-fill-color: transparent;
 }
 .menus .menu {
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
 }
 .menus .entrees_plats:hover {
   box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
@@ -117,8 +117,11 @@ header .button_back {
   font-weight: bold;
   font-size: 1em;
 }
+.menus .button_cmdcontent {
+  display: flex;
+  justify-content: center;
+}
 .menus .button_cmd {
-  margin: auto;
   text-align: center;
   color: white;
   padding: 1em;
@@ -126,6 +129,10 @@ header .button_back {
   background: linear-gradient(175deg, #FF79DA, #9356DC);
   width: 150px;
   box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
+}
+.menus .button_cmd:hover {
+  background: linear-gradient(175deg, #ff98e2, #a97ce0);
+  box-shadow: 0px 0px 10px 3px rgb(195, 195, 195);
 }
 
 /*Footer*/

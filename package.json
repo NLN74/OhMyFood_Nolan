@@ -4,7 +4,7 @@
   "description": "Projet Openclassroom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./style.css"
+    "sass": "sass --watch ./a_la_francaise/sass/main.scss:./a_la_francaise/style.css"
   },
   "repository": {
     "type": "git",

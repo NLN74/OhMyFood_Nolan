@@ -90,9 +90,6 @@ header .button_back {
 .menus .menu {
   margin-bottom: 2.5em;
 }
-.menus .entrees_plats:hover {
-  box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
-}
 .menus .entrees_plats {
   box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
   border-radius: 15px;

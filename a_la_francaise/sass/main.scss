@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 375px;
-  max-width: 760px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -50,11 +50,11 @@ header {
 /*Image Background*/
 
 .background_image{
-
+  width: 100%;
   img{
-    width: 375px;
+    width: 100%;
     object-fit: cover;
-    position: absolute;
+    position: relative;
   }
 
 }
@@ -63,7 +63,7 @@ header {
   padding: 7px 20px 0px 20px;
   background-color: rgb(246, 246, 246);
   z-index: 1;
-  margin-top: 12.5em;
+  margin-top: -3em;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   padding-bottom: 5em;
@@ -88,8 +88,8 @@ header {
 
       /*Design du coeur*/
       .heart {
-        position: absolute;
-        margin: 0.2em 0em 0em 5em;
+       
+        margin: 0em 0em 0em 40%;
         font-size: 25px;
       }
      .heart:active {
@@ -194,7 +194,9 @@ header {
   }
 
 
-  @media screen and (min-width:761px) and (max-width:1920px) {
+
+
+  @media screen and (min-width:1400px) and (max-width:2444px) {
 
     body{
       min-width: none;
@@ -239,7 +241,7 @@ header {
       }
 
       article{
-        width: 25%;
+        width: 30%;
       }
     }
 

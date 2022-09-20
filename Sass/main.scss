@@ -31,7 +31,7 @@ header{
     text-align: center; 
     margin-bottom: 0.25em;
     padding: 1.5em 0em 0.2em 0em;
-    box-shadow: 0px 1px 4px 0px gray;
+    box-shadow: 0px 5px 5px -2.3px rgb(200, 200, 200);
         img{
             width: 162px;
         }
@@ -86,19 +86,22 @@ header{
 
 /*Présentation du fonctionnement du site web*/
 .fonctionnement{
-    display: flex;
-    flex-direction: column;
     margin-bottom: 3.5em;
 
+    .case_fonctionnement{
+        display: flex;
+        flex-direction: column;
+    }
 
-        div{
+
+        .case{
             display: flex;
             align-items: center;
             border: 1px solid transparent;
             box-shadow: 0px 0px 10px 0px rgb(210, 210, 210);
             margin: 1em 1em 1em 2em;
             padding: 0.6em 0em 0.4em 4.8em;
-            border-radius: 20px;
+            border-radius: 21px;
             font-weight: bold;
             color: black;
             background-color: rgb(245, 245, 245);
@@ -142,11 +145,12 @@ header{
 
 /*Carte restaurants*/
 #restaurants{
-    display: flex;
-    flex-direction: column;
     background-color: rgb(245, 245, 245);
     padding-bottom: 4em;
-
+    .case_restaurants{
+        display: flex;
+        flex-direction: column;
+    }
         figure{
             margin: auto;
             margin-bottom: 1.2em;
@@ -204,7 +208,9 @@ header{
                 }
 
                 .lieux{
-                    margin: 0.2em 0em 0em 0.65em;
+                    margin: 0.2em 0em 0em 0em;
+                    font-weight: lighter;
+                    font-size: 17px;
                 }
         }
 
@@ -238,4 +244,69 @@ footer{
         margin-right: 0.7em;
         font-size: 13px;
     }
+}
+
+
+@media screen and (min-width:761px) and (max-width:1920px) {
+
+    body{
+      min-width: none;
+      max-width: none;
+      margin-top: 10px;
+      width: 75%;
+      box-shadow: 0px 0px 10px 10px #F2F2F2;
+      border-radius: 20px;
+    }
+
+    .fonctionnement{
+
+        .case_fonctionnement{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .case{
+            width: 375px;
+        }
+    }
+
+    #restaurants{
+
+        .case_restaurants{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        figure{
+            width: 500px;
+
+            .new{
+                margin-left: 29em;
+
+            }
+            img{
+                width: 500px;
+            }
+            .heart{
+                margin: 0.5em 0em 0em 15em;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+  
+  
+        h4{
+          font-size: 30px;
+          margin-top: 0px;
+        }
+        ul{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          font-size: 20px;
+        }
+      }
 }

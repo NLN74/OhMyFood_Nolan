@@ -51,6 +51,7 @@ header .button_back {
   position: relative;
 }
 
+/*Catégorie menu*/
 .menus {
   padding: 7px 20px 0px 20px;
   background-color: rgb(246, 246, 246);
@@ -59,10 +60,10 @@ header .button_back {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   padding-bottom: 5em;
-  /*Titre A la francaise*/
+  /*Titre*/
   /*Design du coeur*/
   /*Différentes parties des menus*/
-  /*Les différents menus*/
+  /*Boutton commander*/
 }
 .menus h1 {
   font-family: "Shrikhand";
@@ -77,27 +78,96 @@ header .button_back {
   margin-inline-end: 88%;
 }
 .menus .heart {
-  margin: 0em 0em 0em 40%;
+  margin: 0em 0em 0em 35%;
   font-size: 25px;
 }
 .menus .heart:active {
   content: "\f004";
+  animation: heart_anim 1000ms;
   font-family: "FontAwesome";
   background-image: linear-gradient(30deg, #FF79DA, #9356DC);
-  height: 30px;
   background-clip: text;
+  width: 32px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@keyframes heart_anim {
+  from {
+    opacity: 0.33;
+    height: 0px;
+  }
+  to {
+    opacity: 1;
+    height: 30px;
+  }
 }
 .menus .menu {
   margin-bottom: 2.5em;
 }
+.menus .fa-circle-check {
+  color: white;
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  left: 95.5%;
+  rotate: 90deg;
+  font-size: 35px;
+  transition: opacity 500ms, transform 500ms;
+}
+.menus .entrees_plats:hover > .fa-circle-check {
+  opacity: 1;
+  transform: translate(0px, -22px) rotate(250deg);
+}
+.menus .entrees_plats:hover {
+  border-right: 60px solid #99E2D0;
+}
+@keyframes translate_loader {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    color: #F2F2F2;
+  }
+  100% {
+    color: white;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.menus .plats_1 {
+  animation: translate_loader 500ms;
+}
+.menus .plats_2 {
+  animation: translate_loader 1000ms;
+}
+.menus .plats_3 {
+  animation: translate_loader 2000ms;
+}
+.menus .plats_4 {
+  animation: translate_loader 3000ms;
+}
+.menus .plats_5 {
+  animation: translate_loader 4000ms;
+}
+.menus .plats_6 {
+  animation: translate_loader 5000ms;
+}
+.menus .plats_7 {
+  animation: translate_loader 6000ms;
+}
+.menus .plats_8 {
+  animation: translate_loader 6500ms;
+}
+.menus .plats_9 {
+  animation: translate_loader 7000ms;
+}
 .menus .entrees_plats {
+  position: relative;
   box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
   border-radius: 15px;
   padding: 12px 15px 0px 10px;
   margin-bottom: 1em;
   background-color: white;
+  transition: border-right 500ms;
 }
 .menus .entrees_plats h4 {
   font-size: 1.1em;
@@ -111,6 +181,9 @@ header .button_back {
 .menus .entrees_plats span p {
   font-size: 0.9em;
   margin-bottom: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menus .entrees_plats span .prix {
   font-weight: bold;
@@ -180,7 +253,7 @@ footer .ustensibl {
     margin-bottom: 10px;
   }
   header .button_back {
-    margin-right: 60em;
+    margin-right: 70%;
   }
   .background_image img {
     width: 100%;

@@ -104,6 +104,15 @@ header .button_back {
 .menus .menu {
   margin-bottom: 2.5em;
 }
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, -22px) rotate(250deg);
+  }
+}
 .menus .fa-circle-check {
   color: white;
   position: absolute;
@@ -112,11 +121,12 @@ header .button_back {
   left: 95.5%;
   rotate: 90deg;
   font-size: 35px;
-  transition: opacity 500ms, transform 500ms;
+  /*transition: opacity 500ms, transform 500ms;*/
 }
 .menus .entrees_plats:hover > .fa-circle-check {
-  opacity: 1;
-  transform: translate(0px, -22px) rotate(250deg);
+  /*opacity: 1;
+  transform: translate(0px, -22px) rotate(250deg);*/
+  animation: check 500ms;
 }
 .menus .entrees_plats:hover {
   border-right: 60px solid #99E2D0;
@@ -125,10 +135,8 @@ header .button_back {
   0% {
     transform: translateY(20px);
     opacity: 0;
-    color: #F2F2F2;
   }
   100% {
-    color: white;
     transform: translateY(0px);
     opacity: 1;
   }

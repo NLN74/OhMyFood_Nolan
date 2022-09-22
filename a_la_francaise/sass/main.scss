@@ -125,6 +125,19 @@ header {
   margin-bottom: 2.5em;
 }
 
+@keyframes check {
+
+  0%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translate(0px, -22px) rotate(250deg);
+    
+  }
+}
+
     .fa-circle-check{
       color: white;
       position: absolute;
@@ -133,12 +146,14 @@ header {
       left: 95.5%;
       rotate: 90deg;
       font-size: 35px;
-      transition: opacity 500ms, transform 500ms;
+
+      /*transition: opacity 500ms, transform 500ms;*/
     }
     
     .entrees_plats:hover > .fa-circle-check{
-      opacity: 1;
-      transform: translate(0px, -22px) rotate(250deg);
+      /*opacity: 1;
+      transform: translate(0px, -22px) rotate(250deg);*/
+      animation: check 500ms;
       
     }
 
@@ -153,16 +168,16 @@ header {
       {
         transform: translateY(20px);
         opacity: 0;
-        color: #F2F2F2;
+ 
       }
 
 
       100% 
       {
-        color: white;
         transform: translateY(0px);
         opacity: 1;
       }
+      
     }
 
 

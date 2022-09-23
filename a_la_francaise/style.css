@@ -81,7 +81,7 @@ header .button_back {
   margin: 0em 0em 0em 35%;
   font-size: 25px;
 }
-.menus .heart:active {
+.menus .heart:hover {
   content: "\f004";
   animation: heart_anim 1000ms;
   font-family: "FontAwesome";
@@ -105,20 +105,15 @@ header .button_back {
   margin-bottom: 2.5em;
 }
 @keyframes check {
-  0% {
-    opacity: 0;
-  }
   100% {
-    opacity: 1;
     transform: translate(0px, -22px) rotate(250deg);
   }
 }
 .menus .fa-circle-check {
   color: white;
   position: absolute;
-  opacity: 0;
   top: 25%;
-  left: 95.5%;
+  left: 95%;
   rotate: 90deg;
   font-size: 35px;
   /*transition: opacity 500ms, transform 500ms;*/

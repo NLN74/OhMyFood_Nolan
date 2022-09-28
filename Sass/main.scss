@@ -14,13 +14,13 @@ body{
     margin: 0px;
     display: flex;
     flex-direction: column;
-    min-width: 375px;
+    min-width: 320px;
     max-width: 760px;
     margin: auto;
 }
 
 h3{
-    margin: 1.7em 0em 0.6em 0.7em;
+    margin: 1.7em 0em 0.8em 0.7em;
     font-size: 25px;
     font-weight: bold;
 }
@@ -30,7 +30,7 @@ h3{
 header{
     text-align: center; 
     margin-bottom: 0.25em;
-    padding: 1.5em 0em 0.2em 0em;
+    padding: 1.5em 0em 0.5em 0em;
     box-shadow: 0px 5px 5px -2.3px rgb(200, 200, 200);
         img{
             width: 162px;
@@ -104,6 +104,7 @@ header{
             border-radius: 21px;
             font-weight: bold;
             color: black;
+            
             background-color: rgb(245, 245, 245);
 
             &:hover{
@@ -152,9 +153,10 @@ header{
         flex-direction: column;
     }
         figure{
+
             margin: auto;
             margin-bottom: 1.2em;
-            width: 334px;
+            width: 89.1%;
             height: 252px;
             border-radius: 15px;
             box-shadow: 0px 0px 10px 0px rgb(210, 210, 210);
@@ -168,38 +170,46 @@ header{
                     margin-left: 17.6em;
                     font-size: 14px;
                     border-radius: 2.5px;
-                }
-
-                p{
                     position: absolute;
                 }
 
+           
+
                 img{
                     height: 174px;
-                    width: 334px;
+                    width: 100%;
                     border-top-left-radius: 15px;
                     border-top-right-radius: 15px;
                     object-fit: cover;
                 }
                     /*DESIGN HEART*/
-                .heart{
-                    position: absolute;
-                    margin: 0.5em 0em 0em 6.5em;
-                    font-size: 20px;
-                
 
+                .heart{
+                    margin: -0.6em 1em 0em 0em;
+                    font-size: 23px;
                 }
 
 
-                .heart:active{
+                .heart:hover{
                     content: '\f004';
                     font-family: 'FontAwesome';
                     background-image: linear-gradient(30deg, #FF79DA, #9356DC);
-                    height: 17px;
+                    height: 30px;
+                    animation: heart_anim 1000ms;
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent; 
                 }
+
+
+                @keyframes heart_anim {
+                    from {
+                      height: 0px;
+                    }
+                    to {
+                      height: 30px;
+                    }
+                  }
 
                 h4{
                     font-weight: bold;
@@ -211,6 +221,8 @@ header{
                     margin: 0.2em 0em 0em 0em;
                     font-weight: lighter;
                     font-size: 17px;
+                    display: flex;
+                    justify-content: space-between;
                 }
         }
 
@@ -247,16 +259,114 @@ footer{
 }
 
 
-@media screen and (min-width:761px) and (max-width:1920px) {
 
-    body{
-      min-width: none;
-      max-width: none;
-      margin-top: 10px;
-      width: 75%;
-      box-shadow: 0px 0px 10px 10px #F2F2F2;
-      border-radius: 20px;
+
+/*RESPONSIVE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+
+
+
+
+
+
+
+/*Responsive bouton new↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+@media screen and (min-width:320px) and (max-width:364px) {
+
+    #restaurants{
+        figure{
+            .new{
+                margin-left: 64%;
+            }
+
+
+
+
+
+        }
+
+
     }
+}
+
+
+
+
+@media screen and (min-width:390px) and (max-width:449px) {
+
+    #restaurants{
+        figure{
+            .new{
+                margin-left: 68%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:450px) and (max-width:649px) {
+
+    #restaurants{
+        figure{
+            .new{
+                margin-left: 71%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:550px) and (max-width:760px) {
+
+        #restaurants{
+            figure{
+                .new{
+                    margin-left: 74%;
+                }
+            }
+        }
+}
+
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+/*responsive de 600px a 760px (Tablette)*/
+@media screen and (min-width:600px) and (max-width:760px) {
+    footer {
+        display: flex;
+        justify-content: center;
+  
+  
+        h4{
+          margin-top: 0px;
+        }
+        ul{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+
+}
+
+/*Responsive case fonctionnement↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+@media screen and (min-width:760px) and (max-width:900px) {
+    .fonctionnement{
+
+        .case_fonctionnement{
+
+            align-items: center;
+
+        }
+
+        .case{
+            width: 50%;
+        }
+    }
+}
+
+
+@media screen and (min-width:900px) and (max-width:1920px) {
+
 
     .fonctionnement{
 
@@ -269,16 +379,41 @@ footer{
             width: 375px;
         }
     }
+}
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+@media screen and (min-width:1400px) and (max-width:2560px) {
+
+    body{
+        width: 75%;
+    }
+
+}
+
+/*Responsive de 761px a 1920px*/
+@media screen and (min-width:761px) and (max-width:2560px) {
+
+    body{
+      min-width: none;
+      max-width: none;
+      margin-top: 10px;
+      box-shadow: 0px 0px 10px 10px #F2F2F2;
+      border-radius: 20px;
+    }
+
+
 
     #restaurants{
 
         .case_restaurants{
             flex-direction: row;
             flex-wrap: wrap;
+            margin: auto;
         }
 
         figure{
             width: 500px;
+            position: static;
 
             .new{
                 margin-left: 29em;
@@ -287,9 +422,7 @@ footer{
             img{
                 width: 500px;
             }
-            .heart{
-                margin: 0.5em 0em 0em 15em;
-            }
+
         }
     }
 

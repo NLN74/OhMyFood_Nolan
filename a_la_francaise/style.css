@@ -14,7 +14,7 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  min-width: 375px;
+  min-width: 320px;
   max-width: 1400px;
   margin: auto;
 }
@@ -69,6 +69,9 @@ header .button_back {
   font-family: "Shrikhand";
   font-size: 1.5em;
   margin-bottom: 1.5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .menus h2 {
   font-size: 15px;
@@ -78,16 +81,16 @@ header .button_back {
   margin-inline-end: 88%;
 }
 .menus .heart {
-  margin: 0em 0em 0em 35%;
   font-size: 25px;
 }
 .menus .heart:hover {
   content: "\f004";
   animation: heart_anim 1000ms;
+  transform: translateX(7px);
   font-family: "FontAwesome";
   background-image: linear-gradient(30deg, #FF79DA, #9356DC);
   background-clip: text;
-  width: 32px;
+  width: 30px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -257,12 +260,18 @@ footer .ustensibl {
   font-size: 13px;
 }
 
-@media screen and (min-width: 1400px) and (max-width: 2444px) {
+/*responsive 320px (Petit téléphone*/
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  header .button_back {
+    margin-right: 80%;
+  }
+}
+/*responsive Général*/
+@media screen and (min-width: 1000px) and (max-width: 2444px) {
   body {
-    min-width: none;
     max-width: none;
     margin-top: 10px;
-    width: 75%;
+    width: 90%;
     box-shadow: 0px 0px 10px 10px #F2F2F2;
     border-radius: 20px;
   }
@@ -270,7 +279,7 @@ footer .ustensibl {
     margin-bottom: 10px;
   }
   header .button_back {
-    margin-right: 70%;
+    margin-right: 86%;
   }
   .background_image img {
     width: 100%;
@@ -281,9 +290,6 @@ footer .ustensibl {
   .menus {
     margin-top: -10px;
     border-radius: 0px;
-  }
-  .menus .heart {
-    margin: 0.2em 0em 0em 6em;
   }
   .menus .section_article {
     display: flex;

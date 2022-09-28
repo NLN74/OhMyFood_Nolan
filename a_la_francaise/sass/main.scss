@@ -15,7 +15,7 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  min-width: 375px;
+  min-width: 320px;
   max-width: 1400px;
   margin: auto;
 }
@@ -72,11 +72,15 @@ header {
 
 
 
+
 /*Titre*/
     h1{
       font-family: 'Shrikhand';
       font-size: 1.5em;
       margin-bottom: 1.5em;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
 
     h2{
@@ -91,8 +95,7 @@ header {
 
       /*Design du coeur*/
       .heart {
-       
-        margin: 0em 0em 0em 35%;
+        margin: 0em 0em 0em 0em;
         font-size: 25px;
       }
      .heart:hover {
@@ -326,15 +329,26 @@ header {
   }
 
 
+/*responsive 320px (Petit téléphone*/
+@media screen and (min-width:320px) and (max-width:350px) {
+  header{
+
+    .button_back{
+      margin-right: 80%;
+    }
+  }
+}
 
 
-  @media screen and (min-width:1400px) and (max-width:2444px) {
+
+/*responsive Général*/
+  @media screen and (min-width:1000px) and (max-width:2444px) {
 
     body{
       min-width: none;
       max-width: none;
       margin-top: 10px;
-      width: 75%;
+      width: 90%;
       box-shadow: 0px 0px 10px 10px #F2F2F2;
       border-radius: 20px;
     }
@@ -344,7 +358,7 @@ header {
         margin-bottom: 10px;
 
         .button_back{
-          margin-right: 70%;
+          margin-right: 86%;
         }
       }
 
@@ -364,9 +378,6 @@ header {
       margin-top: -10px;
       border-radius: 0px;
 
-      .heart{
-        margin: 0.2em 0em 0em 6em;
-      }
 
       .section_article{
         display: flex;

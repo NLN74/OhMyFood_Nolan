@@ -14,8 +14,9 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  min-width: 375px;
-  max-width: 760px;
+  min-width: 320px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 h3 {
@@ -24,43 +25,293 @@ h3 {
   font-weight: bold;
 }
 
-
-
-
 /**Header**/
 header {
-    text-align: center;
-    margin-bottom: 0.25em;
-    padding: 1.5em 0em 0.2em 0em;
-    box-shadow: 0px 1px 4px 0px gray;
-  }
-  header img {
-    width: 162px;
-  }
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.25em;
+  padding: 1.5em 0em 0.4em 0em;
+}
+header img {
+  width: 162px;
+}
+header .button_back {
+  position: absolute;
+  margin-right: 13.5em;
+  font-size: 1.4em;
+}
 
+/*Image Background*/
+.background_image {
+  width: 100%;
+}
+.background_image img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+/*Catégorie menu*/
+.menus {
+  padding: 7px 20px 0px 20px;
+  background-color: rgb(246, 246, 246);
+  z-index: 1;
+  margin-top: -3em;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  padding-bottom: 5em;
+  /*Titre*/
+  /*Design du coeur*/
+  /*Différentes parties des menus*/
+  /*Boutton commander*/
+}
+.menus h1 {
+  font-family: "Shrikhand";
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.menus h2 {
+  font-size: 15px;
+  font-weight: 200;
+  padding-bottom: 0.2em;
+  border-bottom: 3px solid #99E2D0;
+  margin-inline-end: 88%;
+}
+.menus .heart {
+  font-size: 25px;
+}
+.menus .heart:hover {
+  content: "\f004";
+  animation: heart_anim 1000ms;
+  transform: translateX(7px);
+  font-family: "FontAwesome";
+  background-image: linear-gradient(30deg, #FF79DA, #9356DC);
+  background-clip: text;
+  width: 30px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes heart_anim {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 30px;
+  }
+}
+.menus .menu {
+  margin-bottom: 2.5em;
+}
+@keyframes translate_loader {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.menus .plats_1 {
+  animation: translate_loader 500ms;
+}
+.menus .plats_2 {
+  animation: translate_loader 1000ms;
+}
+.menus .plats_3 {
+  animation: translate_loader 2000ms;
+}
+.menus .plats_4 {
+  animation: translate_loader 3000ms;
+}
+.menus .plats_5 {
+  animation: translate_loader 4000ms;
+}
+.menus .plats_6 {
+  animation: translate_loader 5000ms;
+}
+.menus .plats_7 {
+  animation: translate_loader 6000ms;
+}
+.menus .plats_8 {
+  animation: translate_loader 6500ms;
+}
+.menus .plats_9 {
+  animation: translate_loader 7000ms;
+}
+.menus .entrees_plats {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
+  border-radius: 15px;
+  padding: 0px 0px 0px 2px;
+  margin-bottom: 1em;
+  background-color: white;
+}
+.menus .entrees_plats .plats_text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menus .entrees_plats .plats_text h4 {
+  margin-bottom: -10px;
+  font-size: 0.95em;
+  margin-top: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menus .entrees_plats .plats_text p {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menus .entrees_plats .check {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  /*transform: translateX(69.5px);*/
+}
+.menus .entrees_plats .check .prix {
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 13px;
+  padding-left: 10px;
+}
+.menus .entrees_plats .rotate_check {
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: white;
+  height: 100%;
+  width: 0px;
+  transition: width 500ms;
+}
+.menus .entrees_plats .fa-circle-check {
+  transition: transform 800ms;
+}
+.menus .entrees_plats:hover .rotate_check {
+  width: 70px;
+}
+.menus .entrees_plats:hover .fa-circle-check {
+  transform: rotate(360deg);
+}
+.menus .button_cmdcontent {
+  display: flex;
+  justify-content: center;
+}
+.menus .button_cmd {
+  text-align: center;
+  color: white;
+  padding: 1em;
+  border-radius: 50px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  width: 150px;
+  box-shadow: 0px 0px 10px 0.5px rgb(230, 230, 230);
+  transition: transform 400ms;
+}
+.menus .button_cmd:hover {
+  background: linear-gradient(175deg, #ff98e2, #a97ce0);
+  box-shadow: 0px 0px 10px 3px rgb(245, 245, 245);
+  transform: scale(1.05);
+}
 
 /*Footer*/
+footer {
+  background-color: #353535;
+  padding-bottom: 2em;
+}
+
+footer h4 {
+  font-family: "Shrikhand";
+  font-size: 20px;
+  margin-bottom: 0.7em;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 1.5em;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer li {
+  margin-bottom: 0.4em;
+}
+
+footer .ustensibl {
+  margin-right: 0.7em;
+  font-size: 13px;
+}
+
+/*responsive 320px (Petit téléphone*/
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  header .button_back {
+    margin-right: 80%;
+  }
+}
+/*responsive Général*/
+@media screen and (min-width: 1000px) and (max-width: 2444px) {
+  body {
+    max-width: none;
+    margin-top: 10px;
+    width: 90%;
+    box-shadow: 0px 0px 10px 10px #F2F2F2;
+    border-radius: 20px;
+  }
+  header {
+    margin-bottom: 10px;
+  }
+  header .button_back {
+    margin-right: 86%;
+  }
+  .background_image img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    height: 300px;
+  }
+  .menus {
+    margin-top: -10px;
+    border-radius: 0px;
+  }
+  .menus .section_article {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menus article {
+    width: 30%;
+  }
   footer {
-    background-color: #353535;
-    padding-bottom: 2em;
+    display: flex;
+    justify-content: center;
   }
   footer h4 {
-    font-family: "Shrikhand";
-    font-size: 20px;
-    margin-bottom: 0.7em;
+    font-size: 30px;
+    margin-top: 0px;
   }
   footer ul {
-    list-style: none;
-    padding-left: 1.5em;
-    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
   }
-  footer a {
-    color: white;
-  }
-  footer li {
-    margin-bottom: 0.4em;
-  }
-  footer .ustensibl {
-    margin-right: 0.7em;
-    font-size: 13px;
-  }
+}
+
+/*# sourceMappingURL=style.css.map */

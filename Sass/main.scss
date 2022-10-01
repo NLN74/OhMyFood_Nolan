@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
+
+@keyframes apparition{
+    from{
+        opacity: 0;
+        }
+    
+    to{
+    opacity: 1;
+    }
+
+
+}
+
 /*Propriétés générales du site*/
 *{
     text-decoration: none;
@@ -8,21 +21,306 @@
 
 a{
     color: black;
+    animation: apparition 4s;
+    
 }
+
 
 body{
     margin: 0px;
+}
+
+@keyframes main {
+    from{display: none;}
+    to{}
+}
+
+main{
+
+    position: relative;
+    margin: 0px;
+    
     display: flex;
     flex-direction: column;
     min-width: 320px;
     max-width: 760px;
     margin: auto;
+  
+  
+    
 }
 
 h3{
     margin: 1.7em 0em 0.8em 0.7em;
     font-size: 25px;
     font-weight: bold;
+    animation: apparition 1s;
+}
+
+
+/*Loader*/
+
+@keyframes loader {
+    0%{
+    transform: scale(1);
+   
+    }
+
+    100%{
+        transform: scale(1);
+        
+    }
+}
+
+.anim_pacman{
+    display: flex;
+    align-items: center;
+}
+
+
+.loader{
+    padding-top: 25em;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    position: absolute;
+    background-color: rgba(#ffffff, 0.7);
+    width: 100%;
+    height: 1650px;
+    animation: loader 8s;
+    z-index: 2;
+    transform: scale(0); 
+    
+    
+.loader_img{
+    position: absolute;
+    top: 70%;
+    left: 42%;
+    
+}
+
+
+
+
+    /***********PACMAN*******/
+    .pacman{
+        width: 100px;
+        animation: pacman 10000ms;
+        transform: translateX(130px);
+        z-index: 3;
+       
+
+    }
+
+    @keyframes pacman {
+        0%{
+            
+        }
+
+        100%{
+            transform: translateX(480px);
+            
+        }
+
+
+    }
+
+/*CIRCLE***********/
+    .fa-solid{
+        font-size: 30px;
+        margin-right: 2px;
+        z-index: 2;
+    }
+
+    .point{
+        width: 50px;
+        background: black;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .circles{
+        display: flex;
+        flex-direction: row;
+        padding: 7em;
+        border-radius: 50%;
+        animation: backgroundcolor 10s;
+        
+    
+    }
+
+   @keyframes backgroundcolor {
+        0%{background: linear-gradient(0deg, #FF79DA, #9356DC);}
+        5%{background: linear-gradient(17deg, #9356DC, #99E2D0);}
+        10%{background: linear-gradient(30deg, #99E2D0, #9356DC);}
+        15%{background: linear-gradient(47deg, #9356DC, #FF79DA);}
+        20%{background: linear-gradient(64deg, #FF79DA, #99E2D0);}
+        25%{background: linear-gradient(81deg, #FF79DA, #9356DC);}
+        30%{background: linear-gradient(96deg, #9356DC, #99E2D0);}
+        35%{background: linear-gradient(113deg, #99E2D0, #9356DC);}
+        40%{background: linear-gradient(120deg, #9356DC, #FF79DA);}
+        45%{background: linear-gradient(137deg, #FF79DA, #99E2D0);}
+        50%{background: linear-gradient(154deg, #FF79DA, #9356DC);}
+        55%{background: linear-gradient(171deg, #9356DC, #99E2D0);}
+        60%{background: linear-gradient(188deg, #99E2D0, #9356DC);}
+        65%{background: linear-gradient(205deg, #9356DC, #FF79DA);}
+        70%{background: linear-gradient(222deg, #FF79DA, #99E2D0);}
+        75%{background: linear-gradient(239deg, #FF79DA, #9356DC);}
+        80%{background: linear-gradient(256deg, #9356DC, #99E2D0);}
+        85%{background: linear-gradient(273deg, #99E2D0, #9356DC);}
+        90%{background: linear-gradient(290deg, #9356DC, #FF79DA);}
+        95%{background: linear-gradient(307deg, #FF79DA, #99E2D0);}
+        100%{background: linear-gradient(324deg, #FF79DA, #9356DC);}
+    }
+
+    @keyframes letter {
+        0%{
+
+        }
+        10%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 0;
+
+
+        }
+        
+    }
+
+
+
+
+    .o_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 1ms;
+    }
+
+    .h_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 1s;
+    }
+
+    .m_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 1.5s;
+    }
+
+    .y_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 2s;
+    }
+
+    .f_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 2.5s;
+    }
+
+    .osecond_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 3s;
+    }
+
+    .othirst_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 3.5s;
+    }
+
+    .d_letter{
+        animation: letter;
+        animation-duration: 10s;
+        animation-delay: 4s;
+    }
+
+/***************************/
+    /*Aparition des lettres*/
+    .letter{
+        position: absolute;
+        font-size: 25px;
+        font-family: 'Shrikhand';
+        top: 23.5%;
+        color: white;
+        z-index: 1;
+    }
+
+    @keyframes letter_color {
+        0%{
+            color: white;
+        }
+        50%{
+            color: #9356DC;
+            transform: translateY(-25px) translateX(10px);
+      
+        }
+        100%{
+            color: #9356DC;
+          
+
+        }
+    }
+
+    .O{
+        animation: letter_color 15s;
+        animation-delay: 1s;
+        left: 46.3%;
+
+    }
+
+    .H{
+        animation: letter_color 15s;
+        animation-delay: 1s;
+        left: 47.9%;
+    }
+
+    .M{
+        animation: letter_color 15s;
+        animation-delay: 1.5s;
+        left: 49.2%;
+    }
+
+    .Y{
+        animation: letter_color 15s;
+        animation-delay: 2s;
+        left: 51.3%;
+    }
+
+    .F{
+        animation: letter_color 15s;
+        animation-delay: 2.5s;
+        left: 52.9%;
+    }
+
+    .OF{
+        animation: letter_color 15s;
+        animation-delay: 3s;
+        left: 54.5%;
+    }
+
+    .OS{
+        animation: letter_color 15s;
+        animation-delay: 3.5s;
+        left: 56.2%;
+    }
+
+    .D{
+        animation: letter_color 15s;
+        animation-delay: 4s;
+        left: 57.9%;
+    }
+/***********************/
+
+
+
+
+
 }
 
 
@@ -34,6 +332,7 @@ header{
     box-shadow: 0px 5px 5px -2.3px rgb(200, 200, 200);
         img{
             width: 162px;
+            animation: apparition 1s;
         }
 
 }
@@ -45,6 +344,7 @@ header{
     font-size: 15.5px;
     font-family: "Roboto";
     font-weight: 500;
+    animation: apparition 2s;
 
 
         p::before{
@@ -66,12 +366,14 @@ header{
 
         h2{
             margin-top: 1.5em;
+            animation: apparition 1s;
         }
         p{
             font-weight: lighter;
             font-size: 18px;
             margin-top: -0.5em;
             margin-bottom: 2.5em;
+            animation: apparition 2s;
         }
 
         a{
@@ -104,6 +406,7 @@ header{
             border-radius: 21px;
             font-weight: bold;
             color: black;
+            animation: apparition 4s;
             
             background-color: rgb(245, 245, 245);
 
@@ -145,6 +448,9 @@ header{
 }
 
 /*Carte restaurants*/
+
+
+
 #restaurants{
     background-color: rgb(245, 245, 245);
     padding-bottom: 4em;
@@ -171,6 +477,7 @@ header{
                     font-size: 14px;
                     border-radius: 2.5px;
                     position: absolute;
+
                 }
 
            
@@ -384,7 +691,7 @@ footer{
 
 @media screen and (min-width:1400px) and (max-width:2560px) {
 
-    body{
+    main{
         width: 75%;
     }
 
@@ -393,7 +700,7 @@ footer{
 /*Responsive de 761px a 1920px*/
 @media screen and (min-width:761px) and (max-width:2560px) {
 
-    body{
+    main{
       min-width: none;
       max-width: none;
       margin-top: 10px;

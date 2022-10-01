@@ -1,6 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 /*Propriétés générales du site*/
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   text-decoration: none;
   font-family: "Roboto";
@@ -8,6 +18,7 @@
 
 a {
   color: black;
+  animation: apparition 3s;
 }
 
 body {
@@ -23,6 +34,7 @@ h3 {
   margin: 1.7em 0em 0.6em 0.7em;
   font-size: 25px;
   font-weight: bold;
+  animation: apparition 3s;
 }
 
 /*Loader*/
@@ -312,6 +324,7 @@ header .button_back {
   position: absolute;
   margin-right: 13.5em;
   font-size: 1.4em;
+  animation: apparition 3s;
 }
 
 /*Image Background*/
@@ -322,6 +335,7 @@ header .button_back {
   width: 100%;
   object-fit: cover;
   position: relative;
+  animation: apparition 3s;
 }
 
 /*Catégorie menu*/
@@ -356,6 +370,7 @@ header .button_back {
 .menus .heart {
   margin: 0em 0em 0em 0em;
   font-size: 25px;
+  animation: apparition 3s;
 }
 .menus .heart:hover {
   content: "\f004";
@@ -431,6 +446,7 @@ header .button_back {
   margin-left: 8px;
   overflow: hidden;
   white-space: nowrap;
+  animation: apparition 3s;
 }
 .menus .entrees_plats .plats_text h4 {
   margin-bottom: -10px;
@@ -461,6 +477,7 @@ header .button_back {
   margin-right: 20px;
   font-size: 13px;
   padding-left: 10px;
+  animation: apparition 3s;
 }
 .menus .entrees_plats .rotate_check {
   background-color: #99E2D0;
@@ -506,6 +523,7 @@ header .button_back {
 footer {
   background-color: #353535;
   padding-bottom: 2em;
+  animation: apparition 3s;
 }
 
 footer h4 {

@@ -11,7 +11,12 @@ a {
   color: black;
 }
 
-body {
+body{
+  margin: 0px;
+}
+
+main{
+  position: relative;
   margin: 0px;
   display: flex;
   flex-direction: column;
@@ -110,18 +115,45 @@ h3 {
 
 @keyframes letter_color {
   0%{
+      transform: scale(1);
       color: white;
-  }
+      transform: translateY(0px);}
+  
+  10%{
+      
+      color: #9356DC;
+      transform: translateY(-5px);}
+  20%{
+      transform: translateY(5px);
+      color: white;}
+  30%{
+      color: #9356DC;
+      transform: translateY(-5px);}
+  40%{ 
+      transform: translateY(5px);
+      color: white;}
   50%{
       color: #9356DC;
-      transform: translateY(-20px);
-      margin-bottom: 0px;
-      border-bottom: 1px solid black;
-
+      transform: translateY(-5px);
+  }
+  60%{
+      transform: translateY(5px);
+      color: white;
+  }
+  70%{
+      color: #9356DC;
+      transform: translateY(-5px);
+  }
+  80%{
+      transform: translateY(5px);
+      color: white;}
+  90%{
+      color: #9356DC;
+      transform: translateY(-5px);
   }
   100%{
-      color: #9356DC;
-    
+      color: white;
+      transform: translateY(5px);
 
   }
 }
@@ -129,6 +161,7 @@ h3 {
 .anim_pacman{
   display: flex;
   align-items: center;
+  
 }
 
 
@@ -140,7 +173,7 @@ h3 {
   justify-content: center;
   align-items:baseline;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(114, 114, 114, 0.7);
   width: 100%;
   height: 255%;
   animation: loader 8s;
@@ -192,7 +225,10 @@ h3 {
       padding: 3em;
       border-radius: 50%;
       position: relative;
-      animation: backgroundcolor 10s;   
+      /*
+      animation: backgroundcolor 10s;
+      (Pour faire un fond de couleur avec le keyframe plus loin au dessu
+      */   
   }
 
 
@@ -258,54 +294,60 @@ h3 {
 
 
   .O{
-      animation: letter_color 15s;
-      animation-delay: 1s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       left: 15%;
 
   }
 
   .H{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 1s;
       left: 25%;
   }
 
   .M{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 1.5s;
       left: 32%;
   }
 
   .Y{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 2s;
       left: 43%;
   }
 
   .F{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 2.5s;
       left: 51%;
   }
 
   .OF{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 3s;
       left: 60.5%;
   }
 
   .OS{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 3.5s;
       left: 70%;
   }
 
   .D{
-      animation: letter_color 15s;
+      animation: letter_color 8s;
+      animation-timing-function: ease-in-out;
       animation-delay: 4s;
       left: 78.8%;
   }
-
 
 
 /**Header**/

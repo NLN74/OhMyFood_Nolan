@@ -25,6 +25,279 @@ h3 {
   font-weight: bold;
 }
 
+/*Loader*/
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pacman {
+  100% {
+    transform: translateX(320px);
+  }
+}
+@keyframes backgroundcolor {
+  0% {
+    box-shadow: 0px 0px 10px 10px black;
+    background: linear-gradient(0deg, #FF79DA, #9356DC);
+  }
+  5% {
+    background: linear-gradient(17deg, #9356DC, #99E2D0);
+  }
+  10% {
+    background: linear-gradient(30deg, #99E2D0, #9356DC);
+  }
+  15% {
+    background: linear-gradient(47deg, #9356DC, #FF79DA);
+  }
+  20% {
+    background: linear-gradient(64deg, #FF79DA, #99E2D0);
+  }
+  25% {
+    box-shadow: 0px 0px 10px 10px gray;
+    background: linear-gradient(81deg, #FF79DA, #9356DC);
+  }
+  30% {
+    background: linear-gradient(96deg, #9356DC, #99E2D0);
+  }
+  35% {
+    background: linear-gradient(113deg, #99E2D0, #9356DC);
+  }
+  40% {
+    background: linear-gradient(120deg, #9356DC, #FF79DA);
+  }
+  45% {
+    background: linear-gradient(137deg, #FF79DA, #99E2D0);
+  }
+  50% {
+    box-shadow: 0px 0px 10px 10px black;
+    background: linear-gradient(154deg, #FF79DA, #9356DC);
+  }
+  55% {
+    background: linear-gradient(171deg, #9356DC, #99E2D0);
+  }
+  60% {
+    background: linear-gradient(188deg, #99E2D0, #9356DC);
+  }
+  65% {
+    background: linear-gradient(205deg, #9356DC, #FF79DA);
+  }
+  70% {
+    background: linear-gradient(222deg, #FF79DA, #99E2D0);
+  }
+  75% {
+    box-shadow: 0px 0px 10px 10px gray;
+    background: linear-gradient(239deg, #FF79DA, #9356DC);
+  }
+  80% {
+    background: linear-gradient(256deg, #9356DC, #99E2D0);
+  }
+  85% {
+    background: linear-gradient(273deg, #99E2D0, #9356DC);
+  }
+  90% {
+    background: linear-gradient(290deg, #9356DC, #FF79DA);
+  }
+  95% {
+    background: linear-gradient(307deg, #FF79DA, #99E2D0);
+  }
+  100% {
+    box-shadow: 0px 0px 10px 10px black;
+    background: linear-gradient(324deg, #FF79DA, #9356DC);
+  }
+}
+@keyframes letter {
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes letter_color {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #9356DC;
+    transform: translateY(-20px);
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
+.anim_pacman {
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  overflow: hidden;
+  margin-top: -10px;
+  padding-top: 25em;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 255%;
+  animation: loader 8s;
+  z-index: 2;
+  transform: scale(0);
+}
+
+.loader_img {
+  position: absolute;
+  top: 70%;
+  left: 42%;
+}
+
+/***********PACMAN*******/
+.pacman {
+  width: 250px;
+  animation: pacman 10000ms;
+  transform: translateX(-130px);
+  z-index: 3;
+  position: absolute;
+}
+
+/*CIRCLE***********/
+.fa-solid {
+  font-size: 30px;
+  margin-right: 2px;
+  z-index: 2;
+}
+
+.point {
+  width: 50px;
+  background: black;
+  position: absolute;
+  z-index: 2;
+}
+
+.circles {
+  display: flex;
+  flex-direction: row;
+  padding: 3em;
+  border-radius: 50%;
+  position: relative;
+  animation: backgroundcolor 10s;
+}
+
+.o_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 1ms;
+}
+
+.h_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.m_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 1.5s;
+}
+
+.y_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.f_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 2.5s;
+}
+
+.osecond_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+
+.othirst_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 3.5s;
+}
+
+.d_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+/***************************/
+/*Aparition des lettres*/
+.letter {
+  position: absolute;
+  font-size: 25px;
+  font-family: "Shrikhand";
+  top: 15%;
+  color: white;
+  z-index: 1;
+  text-shadow: 1px 10px 5px black;
+}
+
+.O {
+  animation: letter_color 15s;
+  animation-delay: 1s;
+  left: 15%;
+}
+
+.H {
+  animation: letter_color 15s;
+  animation-delay: 1s;
+  left: 25%;
+}
+
+.M {
+  animation: letter_color 15s;
+  animation-delay: 1.5s;
+  left: 32%;
+}
+
+.Y {
+  animation: letter_color 15s;
+  animation-delay: 2s;
+  left: 43%;
+}
+
+.F {
+  animation: letter_color 15s;
+  animation-delay: 2.5s;
+  left: 51%;
+}
+
+.OF {
+  animation: letter_color 15s;
+  animation-delay: 3s;
+  left: 60.5%;
+}
+
+.OS {
+  animation: letter_color 15s;
+  animation-delay: 3.5s;
+  left: 70%;
+}
+
+.D {
+  animation: letter_color 15s;
+  animation-delay: 4s;
+  left: 78.8%;
+}
+
 /**Header**/
 header {
   display: flex;
@@ -81,16 +354,16 @@ header .button_back {
   margin-inline-end: 88%;
 }
 .menus .heart {
+  margin: 0em 0em 0em 0em;
   font-size: 25px;
 }
 .menus .heart:hover {
   content: "\f004";
   animation: heart_anim 1000ms;
-  transform: translateX(7px);
   font-family: "FontAwesome";
   background-image: linear-gradient(30deg, #FF79DA, #9356DC);
   background-clip: text;
-  width: 30px;
+  width: 32px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -269,6 +542,7 @@ footer .ustensibl {
 /*responsive Général*/
 @media screen and (min-width: 1000px) and (max-width: 2444px) {
   body {
+    min-width: none;
     max-width: none;
     margin-top: 10px;
     width: 90%;

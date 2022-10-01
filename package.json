@@ -4,7 +4,7 @@
   "description": "Projet Openclassroom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./La_palette_du_gout/sass/main.scss:./La_palette_du_gout/style.css"
+    "sass": "sass --watch ./sass/main.scss:./style.css"
   },
   "repository": {
     "type": "git",

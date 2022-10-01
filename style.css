@@ -23,11 +23,6 @@ body {
   margin: 0px;
 }
 
-@keyframes main {
-  from {
-    display: none;
-  }
-}
 main {
   position: relative;
   margin: 0px;
@@ -54,65 +49,14 @@ h3 {
     transform: scale(1);
   }
 }
-.anim_pacman {
-  display: flex;
-  align-items: center;
-}
-
-.loader {
-  padding-top: 25em;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  height: 1650px;
-  animation: loader 8s;
-  z-index: 2;
-  transform: scale(0);
-  /***********PACMAN*******/
-  /*CIRCLE***********/
-  /***************************/
-  /*Aparition des lettres*/
-  /***********************/
-}
-.loader .loader_img {
-  position: absolute;
-  top: 70%;
-  left: 42%;
-}
-.loader .pacman {
-  width: 100px;
-  animation: pacman 10000ms;
-  transform: translateX(130px);
-  z-index: 3;
-}
 @keyframes pacman {
   100% {
-    transform: translateX(480px);
+    transform: translateX(320px);
   }
-}
-.loader .fa-solid {
-  font-size: 30px;
-  margin-right: 2px;
-  z-index: 2;
-}
-.loader .point {
-  width: 50px;
-  background: black;
-  position: absolute;
-  z-index: 2;
-}
-.loader .circles {
-  display: flex;
-  flex-direction: row;
-  padding: 7em;
-  border-radius: 50%;
-  animation: backgroundcolor 10s;
 }
 @keyframes backgroundcolor {
   0% {
+    box-shadow: 0px 0px 10px 10px black;
     background: linear-gradient(0deg, #FF79DA, #9356DC);
   }
   5% {
@@ -128,6 +72,7 @@ h3 {
     background: linear-gradient(64deg, #FF79DA, #99E2D0);
   }
   25% {
+    box-shadow: 0px 0px 10px 10px gray;
     background: linear-gradient(81deg, #FF79DA, #9356DC);
   }
   30% {
@@ -143,6 +88,7 @@ h3 {
     background: linear-gradient(137deg, #FF79DA, #99E2D0);
   }
   50% {
+    box-shadow: 0px 0px 10px 10px black;
     background: linear-gradient(154deg, #FF79DA, #9356DC);
   }
   55% {
@@ -158,6 +104,7 @@ h3 {
     background: linear-gradient(222deg, #FF79DA, #99E2D0);
   }
   75% {
+    box-shadow: 0px 0px 10px 10px gray;
     background: linear-gradient(239deg, #FF79DA, #9356DC);
   }
   80% {
@@ -173,6 +120,7 @@ h3 {
     background: linear-gradient(307deg, #FF79DA, #99E2D0);
   }
   100% {
+    box-shadow: 0px 0px 10px 10px black;
     background: linear-gradient(324deg, #FF79DA, #9356DC);
   }
 }
@@ -184,105 +132,185 @@ h3 {
     opacity: 0;
   }
 }
-.loader .o_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 1ms;
-}
-.loader .h_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 1s;
-}
-.loader .m_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 1.5s;
-}
-.loader .y_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 2s;
-}
-.loader .f_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 2.5s;
-}
-.loader .osecond_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 3s;
-}
-.loader .othirst_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 3.5s;
-}
-.loader .d_letter {
-  animation: letter;
-  animation-duration: 10s;
-  animation-delay: 4s;
-}
-.loader .letter {
-  position: absolute;
-  font-size: 25px;
-  font-family: "Shrikhand";
-  top: 23.5%;
-  color: white;
-  z-index: 1;
-}
 @keyframes letter_color {
   0% {
     color: white;
   }
   50% {
     color: #9356DC;
-    transform: translateY(-25px) translateX(10px);
+    transform: translateY(-20px);
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
   }
   100% {
     color: #9356DC;
   }
 }
-.loader .O {
+.anim_pacman {
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  overflow: hidden;
+  margin-top: -10px;
+  padding-top: 25em;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 1250px;
+  animation: loader 8s;
+  z-index: 2;
+  transform: scale(0);
+}
+
+.loader_img {
+  position: absolute;
+  top: 70%;
+  left: 42%;
+}
+
+/***********PACMAN*******/
+.pacman {
+  width: 100px;
+  animation: pacman 10000ms;
+  transform: translateX(-20px);
+  z-index: 3;
+  position: absolute;
+}
+
+/*CIRCLE***********/
+.fa-solid {
+  font-size: 30px;
+  margin-right: 2px;
+  z-index: 2;
+}
+
+.point {
+  width: 50px;
+  background: black;
+  position: absolute;
+  z-index: 2;
+}
+
+.circles {
+  display: flex;
+  flex-direction: row;
+  padding: 3em;
+  border-radius: 50%;
+  position: relative;
+  animation: backgroundcolor 10s;
+}
+
+.o_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 1ms;
+}
+
+.h_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.m_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 1.5s;
+}
+
+.y_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.f_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 2.5s;
+}
+
+.osecond_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+
+.othirst_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 3.5s;
+}
+
+.d_letter {
+  animation: letter;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+/***************************/
+/*Aparition des lettres*/
+.letter {
+  position: absolute;
+  font-size: 25px;
+  font-family: "Shrikhand";
+  top: 15%;
+  color: white;
+  z-index: 1;
+  text-shadow: 1px 10px 5px black;
+}
+
+.O {
   animation: letter_color 15s;
   animation-delay: 1s;
-  left: 46.3%;
+  left: 15%;
 }
-.loader .H {
+
+.H {
   animation: letter_color 15s;
   animation-delay: 1s;
-  left: 47.9%;
+  left: 25%;
 }
-.loader .M {
+
+.M {
   animation: letter_color 15s;
   animation-delay: 1.5s;
-  left: 49.2%;
+  left: 32%;
 }
-.loader .Y {
+
+.Y {
   animation: letter_color 15s;
   animation-delay: 2s;
-  left: 51.3%;
+  left: 43%;
 }
-.loader .F {
+
+.F {
   animation: letter_color 15s;
   animation-delay: 2.5s;
-  left: 52.9%;
+  left: 51%;
 }
-.loader .OF {
+
+.OF {
   animation: letter_color 15s;
   animation-delay: 3s;
-  left: 54.5%;
+  left: 60.5%;
 }
-.loader .OS {
+
+.OS {
   animation: letter_color 15s;
   animation-delay: 3.5s;
-  left: 56.2%;
+  left: 70%;
 }
-.loader .D {
+
+.D {
   animation: letter_color 15s;
   animation-delay: 4s;
-  left: 57.9%;
+  left: 78.8%;
 }
 
 /**Header**/
@@ -539,6 +567,16 @@ footer .ustensibl {
 @media screen and (min-width: 1400px) and (max-width: 2560px) {
   main {
     width: 75%;
+  }
+}
+/*Responsive Loader*/
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  .letter {
+    top: 15%;
+    font-size: 18px;
+  }
+  .circles {
+    padding: 2em;
   }
 }
 /*Responsive de 761px a 1920px*/

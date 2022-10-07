@@ -598,7 +598,7 @@ footer .ustensibl {
 }
 
 /*responsive Général*/
-@media screen and (min-width: 1000px) and (max-width: 2444px) {
+@media screen and (min-width: 992px) and (max-width: 2444px) {
 main {
     min-width: none;
     max-width: none;
